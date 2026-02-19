@@ -1,4 +1,4 @@
-export default function Navbar() {
+export default function Navbar({ setAuthMode }) {
   const flex = "flex justify-center items-center";
   const authButtonStyle =
     "h-full px-4 md:px-6 lg:w-[8vw] rounded-full font-black duration-300 ease-in-out hover:bg-gray-200 hover:text-black";
@@ -34,15 +34,25 @@ export default function Navbar() {
           backdrop-blur
         "
       >
-        <button className={authButtonStyle}>Sign In</button>
-        <button className={authButtonStyle}>Sign Up</button>
+        <button
+          onClick={() => setAuthMode("login")}
+          className={authButtonStyle}
+        >
+          Sign In
+        </button>
+
+        <button
+          onClick={() => setAuthMode("register")}
+          className={authButtonStyle}
+        >
+          Sign Up
+        </button>
       </div>
 
       {/* Logo */}
       <h1
         className={`${flex} w-[25vw] min-w-[120px] text-2xl md:text-4xl font-black whitespace-nowrap`}
-      >
-      </h1>
+      ></h1>
 
       {/* Contact */}
       <div

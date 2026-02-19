@@ -50,7 +50,7 @@ export default function RegisterForm() {
   };
 
   return (
-    <div className="flex flex-col justify-center items-center bg-[#F4EFE6]/60 backdrop-blur-sm w-full max-w-md mx-auto p-8">
+    <div className="flex flex-col justify-center items-center rounded-lg bg-[#F4EFE6]/60 backdrop-blur-sm w-full max-w-md mx-auto p-8">
       <h2 className="text-3xl font-bold mb-2 text-gray-900">
        Create your account 
       </h2>
