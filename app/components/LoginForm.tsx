@@ -44,11 +44,11 @@ export default function LoginForm() {
   };
 
   return (
-    <div className="flex flex-col justify-center items-center w-full max-w-md mx-auto p-8">
-      <h2 className="w-screen text-3xl font-bold mb-2 text-gray-900 text-center">
-        Welcome back to Bookeo
+    <div className="flex flex-col justify-center items-center w-full max-w-md mx-auto p-10 bg-[#F4EFE6]/65 backdrop-blur-sm rounded-lg shadow-lg">
+      <h2 className="w-full text-3xl font-bold mb-2 text-gray-900 text-left ">
+        Hello again !
       </h2>
-      <p className="text-sm text-gray-500 mb-6 text-center">
+      <p className="w-full text-sm text-gray-500 mb-6 text-left">
         Sign in to manage your library efficiently.
       </p>
 
@@ -65,7 +65,7 @@ export default function LoginForm() {
           <input
             id="username"
             type="text"
-            className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500"
+            className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-grey-500"
             value={username}
             onChange={(e) => setUsername(e.target.value)}
             placeholder="Enter your username"
@@ -83,7 +83,7 @@ export default function LoginForm() {
           <input
             id="password"
             type="password"
-            className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500"
+            className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-grey-500"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             placeholder="••••••••"
@@ -101,23 +101,23 @@ export default function LoginForm() {
             />
             <span>Remember me</span>
           </label>
-          <a href="#" className="text-purple-600 text-sm hover:underline">
-            Forgot password?
+          <a href="#" className="text-blue-700 text-sm hover:underline">
+            Forgot password ?
           </a>
         </div>
 
         <button
           type="submit"
           disabled={loading}
-          className="w-full py-2 px-4 bg-purple-600 hover:bg-purple-700 text-white font-semibold rounded-lg shadow-md transition disabled:opacity-50"
+          className="w-full py-2 px-4 bg-gray-700 hover:bg-gray-600 text-white font-semibold rounded-lg shadow-md transition disabled:opacity-50"
         >
           {loading ? "Logging in..." : "Log in"}
         </button>
-      </form>
+      </form> 
 
       <div className="mt-6 text-center text-sm text-gray-500">
-        Don't have an account?{" "}
-        <a href="#" className="text-purple-600 hover:underline">
+        Don't have an account ?{" "}
+        <a href="#" className="text-blue-700 hover:underline">
           Sign up
         </a>
       </div>

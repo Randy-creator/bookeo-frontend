@@ -1,42 +1,46 @@
 import LoginForm from "./LoginForm";
+import Navbar from "./Navbar";
 
 export default function LandingPage() {
+  const flex = "flex justify-center items-center ";
+  const box_size = "min-h-screen md:min-h-[85vh] w-screen md:w-full max-w-screen md:max-w-[75vw]";
   return (
     <div
-      className="
-        min-h-[55vh]
-        w-full max-w-[75vw]
-        flex flex-col md:flex-row
-        justify-center items-center
-        rounded-xl shadow-2xl
-        mx-auto
-        overflow-hidden
-      "
+      className={`
+          ${flex}
+          ${box_size}
+          bg-[url('/img/books.jpg')]
+          bg-cover bg-center bg-no-repeat
+          overflow-hidden
+          `}
     >
       <div
-        className="
-        relative
-        w-full md:w-1/3
-        h-56 md:h-[70vh]
-        bg-[url('/img/library_picture.jpg')]
-        bg-cover bg-center bg-no-repeat
-        hidden md:block
-       "
+        className={`
+            ${flex}
+            ${box_size}
+            flex-col
+            absolute inset bg-black/35
+            rounded-lg
+            `}
       >
-        <div className="absolute inset- 0 bg-black/35"></div>
+        <Navbar></Navbar>
 
-        <div className="text-white font-bold text-3xl px-6 pt-5 text-right">Bookeo.</div>
-
-      </div>
-
-      <div
-        className="
-          w-full md:w-2/3
-          flex
-          justify-center items-center
-        "
-      >
-        <LoginForm />
+        <div
+          className={`${flex}
+          flex-row
+          h-[75vh]
+          w-full
+          `}
+        >
+          <div
+            className={`
+            ${flex}
+            w-full h-full
+            `}
+          >
+           <LoginForm></LoginForm>
+          </div>
+        </div>
       </div>
     </div>
   );

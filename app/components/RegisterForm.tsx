@@ -50,9 +50,9 @@ export default function RegisterForm() {
   };
 
   return (
-    <div className="flex flex-col justify-center items-center w-full max-w-md mx-auto p-8 bg-white rounded-xl shadow-lg">
-      <h2 className="text-2xl font-bold mb-2 text-gray-900">
-        Create your account
+    <div className="flex flex-col justify-center items-center bg-[#F4EFE6]/60 backdrop-blur-sm w-full max-w-md mx-auto p-8">
+      <h2 className="text-3xl font-bold mb-2 text-gray-900">
+       Create your account 
       </h2>
       <p className="text-sm text-gray-500 mb-6 text-center">
         Join Nucleus UI and start designing with ease.
@@ -67,7 +67,7 @@ export default function RegisterForm() {
           </label>
           <input
             type="text"
-            className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500"
+            className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-500"
             value={username}
             onChange={(e) => setUsername(e.target.value)}
             placeholder="Set your username"
@@ -81,7 +81,7 @@ export default function RegisterForm() {
           </label>
           <input
             type="email"
-            className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500"
+            className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-500"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             placeholder="Enter your email"
@@ -95,7 +95,7 @@ export default function RegisterForm() {
           </label>
           <input
             type="password"
-            className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500"
+            className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-500"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             placeholder="••••••••"
@@ -109,7 +109,7 @@ export default function RegisterForm() {
           </label>
           <input
             type="password"
-            className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500"
+            className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-gray-500"
             value={confirmPassword}
             onChange={(e) => setConfirmPassword(e.target.value)}
             placeholder="••••••••"
@@ -120,7 +120,7 @@ export default function RegisterForm() {
         <button
           type="submit"
           disabled={loading}
-          className="w-full py-2 px-4 bg-purple-600 hover:bg-purple-700 text-white font-semibold rounded-lg shadow-md transition disabled:opacity-50"
+          className="w-full py-2 px-4 bg-gray-600 hover:bg-gray-700 text-white font-semibold rounded-lg shadow-md transition disabled:opacity-50"
         >
           {loading ? "Creating account..." : "Create account"}
         </button>
@@ -128,7 +128,7 @@ export default function RegisterForm() {
 
       <div className="mt-6 text-center text-sm text-gray-500">
         Already have an account?{" "}
-        <a href="/login" className="text-purple-600 hover:underline">
+        <a href="/login" className="text-blue-600 hover:underline">
           Log in
         </a>
       </div>
